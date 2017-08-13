@@ -19,7 +19,9 @@ class ObtainAudioBookListRepository {
     }
     
     func obtainaAudioBookList(completion:([AudioBook])->()) {
-        
+        provider.obtainAudioBookList { (data, success) in
+            print(data)
+        }
     }
     
     
