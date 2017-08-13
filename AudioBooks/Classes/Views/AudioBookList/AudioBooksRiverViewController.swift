@@ -12,6 +12,7 @@ import UIKit
 class AudioBooksRiverViewController: UIViewController {
     
     private let presenter: AudioBooksRiverPresenter
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
     
     init(presenter: AudioBooksRiverPresenter) {
         self.presenter = presenter
@@ -25,6 +26,9 @@ class AudioBooksRiverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        collectionView.dataSource = self
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
+        collectionView.reloadData()
     }
 }
 
@@ -33,4 +37,18 @@ extension AudioBooksRiverViewController: AudioBooksRiverView {
     func displayLoading() {
         print("Loading")
     }
+}
+
+extension AudioBooksRiverViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell : UICollectionViewCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.backgroundColor = .black
+        return cell
+    }
+    
 }
