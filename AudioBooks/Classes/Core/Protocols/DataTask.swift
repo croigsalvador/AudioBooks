@@ -45,8 +45,9 @@ extension DataTask {
     }
     
     func sendRequest(with completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        session.dataTask(with: request) { (data, response, error) in
+       let task = session.dataTask(with: request) { (data, response, error) in
             completion(data, response, error)
         }
+        task.resume()
     }
 }

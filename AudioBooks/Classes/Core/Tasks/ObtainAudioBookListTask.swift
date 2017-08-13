@@ -11,7 +11,7 @@ import Foundation
 class ObtainAudioBookListTask: DataTask {
     
     func obtainAudioBookList(completion : @escaping (Data? , Bool) -> ()) {
-        self.sendRequest{ (data, response, error) in
+        sendRequest{ (data, response, error) in
             if (!self.valid(response: response) || error != nil) {
                 completion(nil, false)
             } else {
