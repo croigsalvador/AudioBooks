@@ -10,14 +10,17 @@ import Foundation
 
 class ObtainAudioBookListRepository {
     
-    fileprivate let repository: 
+    fileprivate let provider: ObtainAudioBookListProvider
+    fileprivate let inMemoryPersistor: AudioBookListInMemoryPersistor
     
-    init(provider: ) {
-        self.repository = repository
+    init(provider: ObtainAudioBookListProvider, inMemoryPersistor: AudioBookListInMemoryPersistor) {
+        self.provider = provider
+        self.inMemoryPersistor = inMemoryPersistor
     }
     
     func obtainaAudioBookList(completion:([AudioBook])->()) {
-        completion([])
+        
     }
+    
     
 }
