@@ -17,10 +17,13 @@
 		0FB588771F40CA3D009C4DDE /* AudioBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588761F40CA3D009C4DDE /* AudioBook.swift */; };
 		0FB588791F40CEA7009C4DDE /* ObtainAudioBookListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588781F40CEA7009C4DDE /* ObtainAudioBookListProvider.swift */; };
 		0FB5887B1F40CEF6009C4DDE /* ObtainAudioBookListTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5887A1F40CEF6009C4DDE /* ObtainAudioBookListTask.swift */; };
-		0FB5887D1F40D722009C4DDE /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5887C1F40D722009C4DDE /* Dictionary.swift */; };
 		0FB5887F1F40D97C009C4DDE /* DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5887E1F40D97C009C4DDE /* DataTask.swift */; };
 		0FB588821F40DA85009C4DDE /* AudioBookListPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588811F40DA85009C4DDE /* AudioBookListPersistor.swift */; };
 		0FB588841F41053F009C4DDE /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588831F41053F009C4DDE /* Data.swift */; };
+		0FB588861F4105C1009C4DDE /* AudioBookDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588851F4105C1009C4DDE /* AudioBookDependencies.swift */; };
+		0FB588891F4107B9009C4DDE /* AudioBooksRiverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588881F4107B9009C4DDE /* AudioBooksRiverViewController.swift */; };
+		0FB5888B1F410801009C4DDE /* AudioBooksRiverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5888A1F410801009C4DDE /* AudioBooksRiverPresenter.swift */; };
+		0FB5888D1F4108F8009C4DDE /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5888C1F4108F8009C4DDE /* Presenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +60,13 @@
 		0FB588761F40CA3D009C4DDE /* AudioBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBook.swift; sourceTree = "<group>"; };
 		0FB588781F40CEA7009C4DDE /* ObtainAudioBookListProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObtainAudioBookListProvider.swift; sourceTree = "<group>"; };
 		0FB5887A1F40CEF6009C4DDE /* ObtainAudioBookListTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObtainAudioBookListTask.swift; sourceTree = "<group>"; };
-		0FB5887C1F40D722009C4DDE /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		0FB5887E1F40D97C009C4DDE /* DataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTask.swift; sourceTree = "<group>"; };
 		0FB588811F40DA85009C4DDE /* AudioBookListPersistor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookListPersistor.swift; sourceTree = "<group>"; };
 		0FB588831F41053F009C4DDE /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		0FB588851F4105C1009C4DDE /* AudioBookDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookDependencies.swift; sourceTree = "<group>"; };
+		0FB588881F4107B9009C4DDE /* AudioBooksRiverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBooksRiverViewController.swift; sourceTree = "<group>"; };
+		0FB5888A1F410801009C4DDE /* AudioBooksRiverPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBooksRiverPresenter.swift; sourceTree = "<group>"; };
+		0FB5888C1F4108F8009C4DDE /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,7 @@
 		0FB588651F40C3D2009C4DDE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0FB588871F4107A4009C4DDE /* AudioBookList */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 		0FB588661F40C4DA009C4DDE /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				0FB588851F4105C1009C4DDE /* AudioBookDependencies.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				0FB5887E1F40D97C009C4DDE /* DataTask.swift */,
+				0FB5888C1F4108F8009C4DDE /* Presenter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -244,7 +253,6 @@
 		0FB5886F1F40C87D009C4DDE /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				0FB5887C1F40D722009C4DDE /* Dictionary.swift */,
 				0FB588831F41053F009C4DDE /* Data.swift */,
 			);
 			path = Commons;
@@ -264,6 +272,15 @@
 				0FB588811F40DA85009C4DDE /* AudioBookListPersistor.swift */,
 			);
 			path = Persistors;
+			sourceTree = "<group>";
+		};
+		0FB588871F4107A4009C4DDE /* AudioBookList */ = {
+			isa = PBXGroup;
+			children = (
+				0FB588881F4107B9009C4DDE /* AudioBooksRiverViewController.swift */,
+				0FB5888A1F410801009C4DDE /* AudioBooksRiverPresenter.swift */,
+			);
+			path = AudioBookList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,12 +423,15 @@
 				0FB588771F40CA3D009C4DDE /* AudioBook.swift in Sources */,
 				0FB588841F41053F009C4DDE /* Data.swift in Sources */,
 				0FB588711F40C8FC009C4DDE /* ObtainAudioBookList.swift in Sources */,
+				0FB588861F4105C1009C4DDE /* AudioBookDependencies.swift in Sources */,
 				0FB588791F40CEA7009C4DDE /* ObtainAudioBookListProvider.swift in Sources */,
 				0FB588351F40BE91009C4DDE /* AppDelegate.swift in Sources */,
 				0FB588821F40DA85009C4DDE /* AudioBookListPersistor.swift in Sources */,
-				0FB5887D1F40D722009C4DDE /* Dictionary.swift in Sources */,
+				0FB5888D1F4108F8009C4DDE /* Presenter.swift in Sources */,
 				0FB588731F40C926009C4DDE /* ObtainAudioBookListRepository.swift in Sources */,
+				0FB588891F4107B9009C4DDE /* AudioBooksRiverViewController.swift in Sources */,
 				0FB5887F1F40D97C009C4DDE /* DataTask.swift in Sources */,
+				0FB5888B1F410801009C4DDE /* AudioBooksRiverPresenter.swift in Sources */,
 				0FB5887B1F40CEF6009C4DDE /* ObtainAudioBookListTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

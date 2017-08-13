@@ -18,7 +18,9 @@ class ObtainAudioBookList {
     
     
     func obtainaAudioBookList(completion:([AudioBook])->()) {
-        completion([])
+        repository.obtainaAudioBookList{(audioBooks) in
+            completion(audioBooks)
+        }
     }
     
 }
