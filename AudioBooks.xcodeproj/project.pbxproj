@@ -12,7 +12,6 @@
 		0FB5883A1F40BE91009C4DDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB588381F40BE91009C4DDE /* Main.storyboard */; };
 		0FB5883C1F40BE91009C4DDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB5883B1F40BE91009C4DDE /* Assets.xcassets */; };
 		0FB5883F1F40BE91009C4DDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB5883D1F40BE91009C4DDE /* LaunchScreen.storyboard */; };
-		0FB5884A1F40BE92009C4DDE /* AudioBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588491F40BE92009C4DDE /* AudioBooksTests.swift */; };
 		0FB588551F40BE92009C4DDE /* AudioBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588541F40BE92009C4DDE /* AudioBooksUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +41,6 @@
 		0FB5883E1F40BE91009C4DDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FB588401F40BE91009C4DDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FB588451F40BE92009C4DDE /* AudioBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FB588491F40BE92009C4DDE /* AudioBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBooksTests.swift; sourceTree = "<group>"; };
 		0FB5884B1F40BE92009C4DDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FB588501F40BE92009C4DDE /* AudioBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB588541F40BE92009C4DDE /* AudioBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioBooksUITests.swift; sourceTree = "<group>"; };
@@ -97,6 +95,7 @@
 		0FB588331F40BE91009C4DDE /* AudioBooks */ = {
 			isa = PBXGroup;
 			children = (
+				0FB588631F40C3D2009C4DDE /* Classes */,
 				0FB588341F40BE91009C4DDE /* AppDelegate.swift */,
 				0FB588361F40BE91009C4DDE /* ViewController.swift */,
 				0FB588381F40BE91009C4DDE /* Main.storyboard */,
@@ -110,7 +109,6 @@
 		0FB588481F40BE92009C4DDE /* AudioBooksTests */ = {
 			isa = PBXGroup;
 			children = (
-				0FB588491F40BE92009C4DDE /* AudioBooksTests.swift */,
 				0FB5884B1F40BE92009C4DDE /* Info.plist */,
 			);
 			path = AudioBooksTests;
@@ -123,6 +121,101 @@
 				0FB588561F40BE92009C4DDE /* Info.plist */,
 			);
 			path = AudioBooksUITests;
+			sourceTree = "<group>";
+		};
+		0FB588631F40C3D2009C4DDE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0FB588641F40C3D2009C4DDE /* Core */,
+				0FB588651F40C3D2009C4DDE /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0FB588641F40C3D2009C4DDE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0FB588661F40C4DA009C4DDE /* Dependencies */,
+				0FB588671F40C4DA009C4DDE /* Mappers */,
+				0FB588681F40C4DA009C4DDE /* Parsers */,
+				0FB588691F40C4DA009C4DDE /* Protocols */,
+				0FB5886A1F40C4DA009C4DDE /* Providers */,
+				0FB5886B1F40C4DA009C4DDE /* Repositories */,
+				0FB5886C1F40C4DA009C4DDE /* Routers */,
+				0FB5886D1F40C4DA009C4DDE /* Tasks */,
+				0FB5886E1F40C4DA009C4DDE /* UseCases */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0FB588651F40C3D2009C4DDE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0FB588661F40C4DA009C4DDE /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		0FB588671F40C4DA009C4DDE /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		0FB588681F40C4DA009C4DDE /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		0FB588691F40C4DA009C4DDE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0FB5886A1F40C4DA009C4DDE /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		0FB5886B1F40C4DA009C4DDE /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0FB5886C1F40C4DA009C4DDE /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		0FB5886D1F40C4DA009C4DDE /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		0FB5886E1F40C4DA009C4DDE /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +364,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FB5884A1F40BE92009C4DDE /* AudioBooksTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +604,7 @@
 				0FB5885B1F40BE92009C4DDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FB5885C1F40BE92009C4DDE /* Build configuration list for PBXNativeTarget "AudioBooksTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +613,7 @@
 				0FB5885E1F40BE92009C4DDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0FB5885F1F40BE92009C4DDE /* Build configuration list for PBXNativeTarget "AudioBooksUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +622,7 @@
 				0FB588611F40BE92009C4DDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
