@@ -63,16 +63,15 @@ extension AudioBooksRiverViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionElementKindSectionHeader {
             let headerView : AudioBookRiverHeaderView = collectionView.dequeueSuplementaryView(forIndexPath: indexPath, kind: kind)
-             headerView.configure(with: presenter.headerViewModel(at: indexPath) as! RiverHeaderViewModel)
+            headerView.configure(with: presenter.headerViewModel(at: indexPath) as! RiverHeaderViewModel)
             return headerView
         }
         fatalError()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-            return CGSize.init(width: collectionView.frame.size.width, height: 50)
-        }
-
+        return CGSize.init(width: collectionView.frame.size.width, height: 50)
+    }
 }
 
 extension AudioBooksRiverViewController: UICollectionViewDelegateFlowLayout {
@@ -86,7 +85,7 @@ extension AudioBooksRiverViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width:150.0, height:150.0  )
+        return CGSize.init(width:150.0, height:180.0  )
     }
 }
 

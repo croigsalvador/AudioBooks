@@ -33,6 +33,7 @@ class ObtainAudioBookListRepository {
                     audioBooks.append(audioBook)
                 }
             }
+            self.inMemoryPersistor.save(audioBooks: audioBooks)
             completion(audioBooks)
         }
     }

@@ -31,13 +31,10 @@ class AudioBooksContainerViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(AudioBookRiverCollectionViewCell.self)
-    }
-}
-extension AudioBooksContainerViewController: CollectionNotifier {
-    func reloadData() {
         collectionView.reloadData()
     }
 }
+
 extension AudioBooksContainerViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -58,6 +55,6 @@ extension AudioBooksContainerViewController: UICollectionViewDataSource {
 extension AudioBooksContainerViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width:collectionView.frame.size.width, height:200.0)
+        return CGSize.init(width:collectionView.frame.size.width, height:230.0)
     }
 }
