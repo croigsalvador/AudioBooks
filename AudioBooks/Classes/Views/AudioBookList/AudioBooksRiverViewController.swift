@@ -32,7 +32,8 @@ class AudioBooksRiverViewController: UIViewController {
     
     func setupCollectionView() {
         collectionView.dataSource = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
+        collectionView.delegate = self
+        collectionView.register(AudioBookCollectionViewCell.self)
     }
 }
 
@@ -53,9 +54,24 @@ extension AudioBooksRiverViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell : UICollectionViewCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
-        cell.backgroundColor = .black
+        let cell : AudioBookCollectionViewCell = collectionView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.configure(with: presenter.cellViewModel(at: indexPath) as! AudioBookViewModel)
         return cell
     }
-    
 }
+
+extension AudioBooksRiverViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 6.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: 6.0, left: 6.0, bottom: 6.0, right: 6.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize.init(width:150.0, height:150.0  )
+    }
+}
+

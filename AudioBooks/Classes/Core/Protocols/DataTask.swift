@@ -19,7 +19,7 @@ protocol DataTask {
 }
 
 extension DataTask {
-    var baseURL: String {return "https://librivox.org/api/feed/audiobooks/?format=json"}
+    var baseURL: String {return "https://librivox.org/api/feed/audiobooks/?format=json&limit=20"}
     var request: URLRequest {
         let url = URL.init(string:baseURL)
         return URLRequest(url: url!)

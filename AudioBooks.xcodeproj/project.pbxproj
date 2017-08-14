@@ -31,6 +31,13 @@
 		0FB588991F41B4E0009C4DDE /* AudioBookViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588981F41B4E0009C4DDE /* AudioBookViewmodel.swift */; };
 		0FB5889B1F41B737009C4DDE /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5889A1F41B737009C4DDE /* DataSource.swift */; };
 		0FB5889D1F41BA37009C4DDE /* CollectionNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5889C1F41BA37009C4DDE /* CollectionNotifier.swift */; };
+		0FB588A01F41FC85009C4DDE /* AudioBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5889E1F41FC85009C4DDE /* AudioBookCollectionViewCell.swift */; };
+		0FB588A11F41FC85009C4DDE /* AudioBookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB5889F1F41FC85009C4DDE /* AudioBookCollectionViewCell.xib */; };
+		0FB588A41F42022A009C4DDE /* AudioBooksContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588A21F42022A009C4DDE /* AudioBooksContainerViewController.swift */; };
+		0FB588A51F42022A009C4DDE /* AudioBooksContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB588A31F42022A009C4DDE /* AudioBooksContainerViewController.xib */; };
+		0FB588A81F420994009C4DDE /* AudioBookRiverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588A61F420994009C4DDE /* AudioBookRiverCollectionViewCell.swift */; };
+		0FB588A91F420994009C4DDE /* AudioBookRiverCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB588A71F420994009C4DDE /* AudioBookRiverCollectionViewCell.xib */; };
+		0FB588AB1F420B24009C4DDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588AA1F420B24009C4DDE /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +88,13 @@
 		0FB588981F41B4E0009C4DDE /* AudioBookViewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookViewmodel.swift; sourceTree = "<group>"; };
 		0FB5889A1F41B737009C4DDE /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		0FB5889C1F41BA37009C4DDE /* CollectionNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNotifier.swift; sourceTree = "<group>"; };
+		0FB5889E1F41FC85009C4DDE /* AudioBookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookCollectionViewCell.swift; sourceTree = "<group>"; };
+		0FB5889F1F41FC85009C4DDE /* AudioBookCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioBookCollectionViewCell.xib; sourceTree = "<group>"; };
+		0FB588A21F42022A009C4DDE /* AudioBooksContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBooksContainerViewController.swift; sourceTree = "<group>"; };
+		0FB588A31F42022A009C4DDE /* AudioBooksContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioBooksContainerViewController.xib; sourceTree = "<group>"; };
+		0FB588A61F420994009C4DDE /* AudioBookRiverCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookRiverCollectionViewCell.swift; sourceTree = "<group>"; };
+		0FB588A71F420994009C4DDE /* AudioBookRiverCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioBookRiverCollectionViewCell.xib; sourceTree = "<group>"; };
+		0FB588AA1F420B24009C4DDE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +204,10 @@
 			isa = PBXGroup;
 			children = (
 				0FB588871F4107A4009C4DDE /* AudioBookList */,
+				0FB588A21F42022A009C4DDE /* AudioBooksContainerViewController.swift */,
+				0FB588A31F42022A009C4DDE /* AudioBooksContainerViewController.xib */,
+				0FB588A61F420994009C4DDE /* AudioBookRiverCollectionViewCell.swift */,
+				0FB588A71F420994009C4DDE /* AudioBookRiverCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +291,7 @@
 			children = (
 				0FB588831F41053F009C4DDE /* Data.swift */,
 				0FB588921F411071009C4DDE /* CollectionView.swift */,
+				0FB588AA1F420B24009C4DDE /* ViewController.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -300,6 +319,8 @@
 				0FB588901F410F00009C4DDE /* AudioBooksRiverViewController.xib */,
 				0FB5888A1F410801009C4DDE /* AudioBooksRiverPresenter.swift */,
 				0FB588981F41B4E0009C4DDE /* AudioBookViewmodel.swift */,
+				0FB5889E1F41FC85009C4DDE /* AudioBookCollectionViewCell.swift */,
+				0FB5889F1F41FC85009C4DDE /* AudioBookCollectionViewCell.xib */,
 			);
 			path = AudioBookList;
 			sourceTree = "<group>";
@@ -415,7 +436,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FB5883F1F40BE91009C4DDE /* LaunchScreen.storyboard in Resources */,
+				0FB588A11F41FC85009C4DDE /* AudioBookCollectionViewCell.xib in Resources */,
+				0FB588A51F42022A009C4DDE /* AudioBooksContainerViewController.xib in Resources */,
 				0FB5883C1F40BE91009C4DDE /* Assets.xcassets in Resources */,
+				0FB588A91F420994009C4DDE /* AudioBookRiverCollectionViewCell.xib in Resources */,
 				0FB5883A1F40BE91009C4DDE /* Main.storyboard in Resources */,
 				0FB588911F410F00009C4DDE /* AudioBooksRiverViewController.xib in Resources */,
 			);
@@ -449,7 +473,9 @@
 				0FB588711F40C8FC009C4DDE /* ObtainAudioBookList.swift in Sources */,
 				0FB588861F4105C1009C4DDE /* AudioBookDependencies.swift in Sources */,
 				0FB5889D1F41BA37009C4DDE /* CollectionNotifier.swift in Sources */,
+				0FB588AB1F420B24009C4DDE /* ViewController.swift in Sources */,
 				0FB588791F40CEA7009C4DDE /* ObtainAudioBookListProvider.swift in Sources */,
+				0FB588A01F41FC85009C4DDE /* AudioBookCollectionViewCell.swift in Sources */,
 				0FB588351F40BE91009C4DDE /* AppDelegate.swift in Sources */,
 				0FB588971F41B4A2009C4DDE /* AudioBookViewModelMapper.swift in Sources */,
 				0FB588821F40DA85009C4DDE /* AudioBookListPersistor.swift in Sources */,
@@ -459,6 +485,8 @@
 				0FB588891F4107B9009C4DDE /* AudioBooksRiverViewController.swift in Sources */,
 				0FB588991F41B4E0009C4DDE /* AudioBookViewmodel.swift in Sources */,
 				0FB5887F1F40D97C009C4DDE /* DataTask.swift in Sources */,
+				0FB588A41F42022A009C4DDE /* AudioBooksContainerViewController.swift in Sources */,
+				0FB588A81F420994009C4DDE /* AudioBookRiverCollectionViewCell.swift in Sources */,
 				0FB5888B1F410801009C4DDE /* AudioBooksRiverPresenter.swift in Sources */,
 				0FB5887B1F40CEF6009C4DDE /* ObtainAudioBookListTask.swift in Sources */,
 			);
