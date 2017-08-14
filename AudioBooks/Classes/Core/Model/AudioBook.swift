@@ -9,14 +9,14 @@
 import Foundation
 
 struct AudioBook {
-    let id: Int
+    let id: String
     let title: String
     let author: String
     let description: String
     let language: String
     let zipURL: String
     
-    init(id: Int, title: String, author: String, description: String, language: String, zipURL:String) {
+    init(id: String, title: String, author: String, description: String, language: String, zipURL:String) {
         self.id = id
         self.title = title
         self.author = author

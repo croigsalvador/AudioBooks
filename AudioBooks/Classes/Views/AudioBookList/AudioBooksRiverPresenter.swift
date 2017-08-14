@@ -13,7 +13,7 @@ protocol AudioBooksRiverView: class {
 }
 
 class AudioBooksRiverPresenter: Presenter, DataSource {
-
+    
     weak var view: (AudioBooksRiverView & CollectionNotifier)?
     private let obtainAudioBookList: ObtainAudioBookList
     private var audioBookCellViewModels = [AudioBookViewModel]()
@@ -23,9 +23,13 @@ class AudioBooksRiverPresenter: Presenter, DataSource {
     }
     
     func viewDidLoad() {
-        obtainAudioBookList.obtainaAudioBookList { (audiosBooks) in
-            self.audioBookCellViewModels = audiosBooks
-            self.view?.reloadData()
+        DispatchQueue.global(qos: .default).async {
+            self.obtainAudioBookList.obtainaAudioBookList { (audiosBooks) in
+                self.audioBookCellViewModels = audiosBooks
+                DispatchQueue.main.async {
+                    self.view?.reloadData()
+                }
+            }
         }
     }
     
