@@ -10,6 +10,11 @@ import Foundation
 
 class AudioBookDependencies {
     
+    class func audioBooksContainerViewController() -> AudioBooksContainerViewController {
+        let viewControllers = [AudioBookDependencies.audioBooksRiverViewController()]
+        return AudioBooksContainerViewController.init(viewControllers: viewControllers)
+    }
+    
     class func audioBooksRiverViewController() -> AudioBooksRiverViewController {
         let repository = ObtainAudioBookListRepository.init(provider: ObtainAudioBookListProvider(), inMemoryPersistor: AudioBookListInMemoryPersistor(), parser: AudioBookParser())
         let useCase = ObtainAudioBookList.init(repository: repository, mapper: AudioBookViewModelMapper())

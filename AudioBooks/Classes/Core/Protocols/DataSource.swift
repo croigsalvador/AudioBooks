@@ -12,9 +12,12 @@ protocol DataSource {
     func numberOfSections() -> Int
     func numberOfItems(in section: Int) -> Int
     func cellViewModel(at indexPath:IndexPath) -> CellViewModel
+    func headerViewModel(at indexPath: IndexPath) -> HeaderViewModel
 }
 
 protocol CellViewModel {}
+protocol HeaderViewModel {}
+
 
 extension DataSource {
     func numberOfSections() -> Int {

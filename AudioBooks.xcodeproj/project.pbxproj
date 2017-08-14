@@ -38,6 +38,8 @@
 		0FB588A81F420994009C4DDE /* AudioBookRiverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588A61F420994009C4DDE /* AudioBookRiverCollectionViewCell.swift */; };
 		0FB588A91F420994009C4DDE /* AudioBookRiverCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB588A71F420994009C4DDE /* AudioBookRiverCollectionViewCell.xib */; };
 		0FB588AB1F420B24009C4DDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588AA1F420B24009C4DDE /* ViewController.swift */; };
+		0FB588AE1F421F30009C4DDE /* AudioBookRiverHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588AC1F421F30009C4DDE /* AudioBookRiverHeaderView.swift */; };
+		0FB588AF1F421F30009C4DDE /* AudioBookRiverHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB588AD1F421F30009C4DDE /* AudioBookRiverHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		0FB588A61F420994009C4DDE /* AudioBookRiverCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookRiverCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FB588A71F420994009C4DDE /* AudioBookRiverCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioBookRiverCollectionViewCell.xib; sourceTree = "<group>"; };
 		0FB588AA1F420B24009C4DDE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0FB588AC1F421F30009C4DDE /* AudioBookRiverHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookRiverHeaderView.swift; sourceTree = "<group>"; };
+		0FB588AD1F421F30009C4DDE /* AudioBookRiverHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioBookRiverHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +325,8 @@
 				0FB588981F41B4E0009C4DDE /* AudioBookViewmodel.swift */,
 				0FB5889E1F41FC85009C4DDE /* AudioBookCollectionViewCell.swift */,
 				0FB5889F1F41FC85009C4DDE /* AudioBookCollectionViewCell.xib */,
+				0FB588AC1F421F30009C4DDE /* AudioBookRiverHeaderView.swift */,
+				0FB588AD1F421F30009C4DDE /* AudioBookRiverHeaderView.xib */,
 			);
 			path = AudioBookList;
 			sourceTree = "<group>";
@@ -441,6 +447,7 @@
 				0FB5883C1F40BE91009C4DDE /* Assets.xcassets in Resources */,
 				0FB588A91F420994009C4DDE /* AudioBookRiverCollectionViewCell.xib in Resources */,
 				0FB5883A1F40BE91009C4DDE /* Main.storyboard in Resources */,
+				0FB588AF1F421F30009C4DDE /* AudioBookRiverHeaderView.xib in Resources */,
 				0FB588911F410F00009C4DDE /* AudioBooksRiverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +483,7 @@
 				0FB588AB1F420B24009C4DDE /* ViewController.swift in Sources */,
 				0FB588791F40CEA7009C4DDE /* ObtainAudioBookListProvider.swift in Sources */,
 				0FB588A01F41FC85009C4DDE /* AudioBookCollectionViewCell.swift in Sources */,
+				0FB588AE1F421F30009C4DDE /* AudioBookRiverHeaderView.swift in Sources */,
 				0FB588351F40BE91009C4DDE /* AppDelegate.swift in Sources */,
 				0FB588971F41B4A2009C4DDE /* AudioBookViewModelMapper.swift in Sources */,
 				0FB588821F40DA85009C4DDE /* AudioBookListPersistor.swift in Sources */,

@@ -40,4 +40,8 @@ class AudioBooksRiverPresenter: Presenter, DataSource {
     func cellViewModel(at indexPath: IndexPath) -> CellViewModel {
         return audioBookCellViewModels[indexPath.item]
     }
+    
+    func headerViewModel(at indexPath: IndexPath) -> HeaderViewModel {
+        return RiverHeaderViewModel(title: "Top AudioBooks")
+    }
 }

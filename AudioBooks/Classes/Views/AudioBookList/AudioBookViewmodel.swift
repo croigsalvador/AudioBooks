@@ -17,3 +17,11 @@ struct AudioBookViewModel : CellViewModel {
         self.author = audioBook.author
     }
 }
+
+struct RiverHeaderViewModel : HeaderViewModel {
+    let title: String
+    
+    init(title: String) {
+        self.title = title
+    }
+}

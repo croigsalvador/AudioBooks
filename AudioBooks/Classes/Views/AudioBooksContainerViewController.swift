@@ -11,7 +11,7 @@ import UIKit
 class AudioBooksContainerViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    fileprivate let viewControllers = [UIViewController]()
+    fileprivate var viewControllers = [UIViewController]()
     
     init(viewControllers: [UIViewController]) {
         self.viewControllers = viewControllers

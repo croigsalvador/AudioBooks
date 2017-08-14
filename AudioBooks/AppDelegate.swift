@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func setupInitialViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let initialViewController = UINavigationController.init(rootViewController: AudioBookDependencies.audioBooksRiverViewController())
+        let initialViewController = UINavigationController.init(rootViewController: AudioBookDependencies.audioBooksContainerViewController())
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
     }
