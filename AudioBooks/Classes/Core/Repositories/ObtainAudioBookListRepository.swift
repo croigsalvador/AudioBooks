@@ -12,15 +12,28 @@ class ObtainAudioBookListRepository {
     
     fileprivate let provider: ObtainAudioBookListProvider
     fileprivate let inMemoryPersistor: AudioBookListInMemoryPersistor
+    fileprivate let parser: AudioBookParser
     
-    init(provider: ObtainAudioBookListProvider, inMemoryPersistor: AudioBookListInMemoryPersistor) {
+    init(provider: ObtainAudioBookListProvider, inMemoryPersistor: AudioBookListInMemoryPersistor, parser: AudioBookParser) {
         self.provider = provider
         self.inMemoryPersistor = inMemoryPersistor
+        self.parser = parser
     }
     
-    func obtainaAudioBookList(completion:([AudioBook])->()) {
+    func obtainaAudioBookList(completion:@escaping ([AudioBook])->()) {
         provider.obtainAudioBookList { (data, success) in
-            print(data)
+            guard let json = data,
+                let books = json["books"] as? [[String:AnyObject]] else {
+                completion(nil)
+                return
+            }
+            var audioBooks = [AudioBook]()
+            for book in books {
+                if let audioBook = self.parser.parse(json: book) {
+                    audioBooks.append(audioBook)
+                }
+            }
+            completion(audioBooks)
         }
     }
     

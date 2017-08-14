@@ -11,15 +11,18 @@ import Foundation
 class ObtainAudioBookList {
     
     fileprivate let repository: ObtainAudioBookListRepository
+    fileprivate let mapper: AudioBookViewModelMapper
+    fileprivate let audioBookViewModels = [AudioBookViewModel]()
     
-    init(repository: ObtainAudioBookListRepository) {
+    init(repository: ObtainAudioBookListRepository, mapper: AudioBookViewModelMapper) {
         self.repository = repository
+        self.mapper = mapper
     }
     
     
-    func obtainaAudioBookList(completion:([AudioBook])->()) {
+    func obtainaAudioBookList(completion:@escaping ([AudioBookViewModel])->()) {
         repository.obtainaAudioBookList{(audioBooks) in
-            completion(audioBooks)
+            completion(self.mapper.map(audioBooks: audioBooks))
         }
     }
     

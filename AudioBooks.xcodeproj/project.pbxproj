@@ -26,6 +26,9 @@
 		0FB5888D1F4108F8009C4DDE /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5888C1F4108F8009C4DDE /* Presenter.swift */; };
 		0FB588911F410F00009C4DDE /* AudioBooksRiverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FB588901F410F00009C4DDE /* AudioBooksRiverViewController.xib */; };
 		0FB588931F411071009C4DDE /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588921F411071009C4DDE /* CollectionView.swift */; };
+		0FB588951F419578009C4DDE /* AudioBookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588941F419578009C4DDE /* AudioBookParser.swift */; };
+		0FB588971F41B4A2009C4DDE /* AudioBookViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588961F41B4A2009C4DDE /* AudioBookViewModelMapper.swift */; };
+		0FB588991F41B4E0009C4DDE /* AudioBookViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588981F41B4E0009C4DDE /* AudioBookViewmodel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		0FB5888C1F4108F8009C4DDE /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		0FB588901F410F00009C4DDE /* AudioBooksRiverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioBooksRiverViewController.xib; sourceTree = "<group>"; };
 		0FB588921F411071009C4DDE /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		0FB588941F419578009C4DDE /* AudioBookParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookParser.swift; sourceTree = "<group>"; };
+		0FB588961F41B4A2009C4DDE /* AudioBookViewModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookViewModelMapper.swift; sourceTree = "<group>"; };
+		0FB588981F41B4E0009C4DDE /* AudioBookViewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioBookViewmodel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +201,7 @@
 		0FB588671F40C4DA009C4DDE /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				0FB588961F41B4A2009C4DDE /* AudioBookViewModelMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 		0FB588681F40C4DA009C4DDE /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				0FB588941F419578009C4DDE /* AudioBookParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				0FB588881F4107B9009C4DDE /* AudioBooksRiverViewController.swift */,
 				0FB588901F410F00009C4DDE /* AudioBooksRiverViewController.xib */,
 				0FB5888A1F410801009C4DDE /* AudioBooksRiverPresenter.swift */,
+				0FB588981F41B4E0009C4DDE /* AudioBookViewmodel.swift */,
 			);
 			path = AudioBookList;
 			sourceTree = "<group>";
@@ -434,10 +443,13 @@
 				0FB588861F4105C1009C4DDE /* AudioBookDependencies.swift in Sources */,
 				0FB588791F40CEA7009C4DDE /* ObtainAudioBookListProvider.swift in Sources */,
 				0FB588351F40BE91009C4DDE /* AppDelegate.swift in Sources */,
+				0FB588971F41B4A2009C4DDE /* AudioBookViewModelMapper.swift in Sources */,
 				0FB588821F40DA85009C4DDE /* AudioBookListPersistor.swift in Sources */,
 				0FB5888D1F4108F8009C4DDE /* Presenter.swift in Sources */,
+				0FB588951F419578009C4DDE /* AudioBookParser.swift in Sources */,
 				0FB588731F40C926009C4DDE /* ObtainAudioBookListRepository.swift in Sources */,
 				0FB588891F4107B9009C4DDE /* AudioBooksRiverViewController.swift in Sources */,
+				0FB588991F41B4E0009C4DDE /* AudioBookViewmodel.swift in Sources */,
 				0FB5887F1F40D97C009C4DDE /* DataTask.swift in Sources */,
 				0FB5888B1F410801009C4DDE /* AudioBooksRiverPresenter.swift in Sources */,
 				0FB5887B1F40CEF6009C4DDE /* ObtainAudioBookListTask.swift in Sources */,
