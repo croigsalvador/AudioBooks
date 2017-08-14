@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AudioBookViewModel {
+struct AudioBookViewModel : CellViewModel {
     let title: String
     let author: String
     

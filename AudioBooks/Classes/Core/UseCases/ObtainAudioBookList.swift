@@ -12,7 +12,7 @@ class ObtainAudioBookList {
     
     fileprivate let repository: ObtainAudioBookListRepository
     fileprivate let mapper: AudioBookViewModelMapper
-    fileprivate let audioBookViewModels = [AudioBookViewModel]()
+    fileprivate var audioBookViewModels = [AudioBookViewModel]()
     
     init(repository: ObtainAudioBookListRepository, mapper: AudioBookViewModelMapper) {
         self.repository = repository
@@ -22,7 +22,10 @@ class ObtainAudioBookList {
     
     func obtainaAudioBookList(completion:@escaping ([AudioBookViewModel])->()) {
         repository.obtainaAudioBookList{(audioBooks) in
-            completion(self.mapper.map(audioBooks: audioBooks))
+            if let audioBooks = audioBooks {
+                self.audioBookViewModels = self.mapper.map(audioBooks: audioBooks)
+            }
+            completion(self.audioBookViewModels)
         }
     }
     

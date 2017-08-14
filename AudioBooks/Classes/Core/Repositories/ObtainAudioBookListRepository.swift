@@ -20,7 +20,7 @@ class ObtainAudioBookListRepository {
         self.parser = parser
     }
     
-    func obtainaAudioBookList(completion:@escaping ([AudioBook])->()) {
+    func obtainaAudioBookList(completion:@escaping ([AudioBook]?)->()) {
         provider.obtainAudioBookList { (data, success) in
             guard let json = data,
                 let books = json["books"] as? [[String:AnyObject]] else {

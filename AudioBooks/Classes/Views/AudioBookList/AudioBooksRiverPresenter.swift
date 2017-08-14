@@ -8,13 +8,15 @@
 
 import Foundation
 
-protocol AudioBooksRiverView {
-    func displayLoading()
+protocol AudioBooksRiverView: class {
+    
 }
 
-class AudioBooksRiverPresenter: Presenter {
+class AudioBooksRiverPresenter: Presenter, DataSource {
 
+    weak var view: (AudioBooksRiverView & CollectionNotifier)?
     private let obtainAudioBookList: ObtainAudioBookList
+    private var audioBookCellViewModels = [AudioBookViewModel]()
     
     init(obtainAudioBookList: ObtainAudioBookList) {
         self.obtainAudioBookList = obtainAudioBookList
@@ -22,7 +24,16 @@ class AudioBooksRiverPresenter: Presenter {
     
     func viewDidLoad() {
         obtainAudioBookList.obtainaAudioBookList { (audiosBooks) in
-            print(audiosBooks)
+            self.audioBookCellViewModels = audiosBooks
+            self.view?.reloadData()
         }
+    }
+    
+    func numberOfItems(in section: Int) -> Int {
+        return audioBookCellViewModels.count
+    }
+    
+    func cellViewModel(at indexPath: IndexPath) -> CellViewModel {
+        return audioBookCellViewModels[indexPath.item]
     }
 }

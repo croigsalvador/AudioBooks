@@ -11,12 +11,13 @@ import UIKit
 
 class AudioBooksRiverViewController: UIViewController {
     
-    private let presenter: AudioBooksRiverPresenter
+    fileprivate let presenter: AudioBooksRiverPresenter
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     
     init(presenter: AudioBooksRiverPresenter) {
         self.presenter = presenter
         super.init(nibName:"AudioBooksRiverViewController", bundle:nil)
+        self.presenter.view = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,23 +27,29 @@ class AudioBooksRiverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
-        collectionView.reloadData()
     }
 }
 
 extension AudioBooksRiverViewController: AudioBooksRiverView {
     
-    func displayLoading() {
-        print("Loading")
+}
+
+extension AudioBooksRiverViewController: CollectionNotifier {
+    func reloadData() {
+        collectionView.reloadData()
     }
 }
 
 extension AudioBooksRiverViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return presenter.numberOfItems(in: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
