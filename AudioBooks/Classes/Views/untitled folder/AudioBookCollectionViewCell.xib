@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gotham Book.otf">
+            <string>Gotham-Book</string>
+        </array>
+        <array key="Gotham Medium.otf">
+            <string>Gotham-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AudioBookCollectionViewCell" id="gTV-IL-0wX" customClass="AudioBookCollectionViewCell" customModule="AudioBooks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oto-wr-hdO">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                        <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbV-12-eAM">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30037715520000002" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Coo-KL-LiS">
+                        <rect key="frame" x="0.0" y="77" width="150" height="46"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfp-sl-3An">
+                                <rect key="frame" x="15" y="0.0" width="120" height="15"/>
+                                <fontDescription key="fontDescription" name="Gotham-Medium" family="Gotham" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BsO-VW-hzi">
+                                <rect key="frame" x="20" y="25" width="110" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="hYI-u2-FUE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRM-nS-GC3">
+                                <rect key="frame" x="15" y="36" width="120" height="10"/>
+                                <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="9"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BsO-VW-hzi" firstAttribute="leading" secondItem="Coo-KL-LiS" secondAttribute="leading" constant="20" id="2FN-IQ-HAi"/>
+                            <constraint firstAttribute="bottom" secondItem="HRM-nS-GC3" secondAttribute="bottom" id="5eQ-vf-1Fu"/>
+                            <constraint firstItem="HRM-nS-GC3" firstAttribute="top" secondItem="BsO-VW-hzi" secondAttribute="bottom" constant="10" id="7Iv-XO-bny"/>
+                            <constraint firstAttribute="trailing" secondItem="BsO-VW-hzi" secondAttribute="trailing" constant="20" id="Bul-nQ-rfK"/>
+                            <constraint firstItem="pfp-sl-3An" firstAttribute="top" secondItem="Coo-KL-LiS" secondAttribute="top" id="TKO-NK-pj0"/>
+                            <constraint firstAttribute="trailing" secondItem="pfp-sl-3An" secondAttribute="trailing" constant="15" id="Wuh-h9-Qds"/>
+                            <constraint firstAttribute="trailing" secondItem="HRM-nS-GC3" secondAttribute="trailing" constant="15" id="oNb-uS-01m"/>
+                            <constraint firstItem="BsO-VW-hzi" firstAttribute="top" secondItem="pfp-sl-3An" secondAttribute="bottom" constant="10" id="pMh-cb-oKj"/>
+                            <constraint firstItem="pfp-sl-3An" firstAttribute="leading" secondItem="Coo-KL-LiS" secondAttribute="leading" constant="15" id="xm6-Aq-7R4"/>
+                            <constraint firstItem="HRM-nS-GC3" firstAttribute="leading" secondItem="Coo-KL-LiS" secondAttribute="leading" constant="15" id="xqR-ll-fW3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="nbV-12-eAM" firstAttribute="width" secondItem="Oto-wr-hdO" secondAttribute="width" id="8Do-i4-cGr"/>
+                <constraint firstItem="Oto-wr-hdO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8Ls-gQ-fXj"/>
+                <constraint firstItem="Coo-KL-LiS" firstAttribute="leading" secondItem="nbV-12-eAM" secondAttribute="leading" id="HwH-tB-2C4"/>
+                <constraint firstItem="nbV-12-eAM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XTc-up-pHv"/>
+                <constraint firstItem="nbV-12-eAM" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="gIG-la-3oI"/>
+                <constraint firstItem="Oto-wr-hdO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="grT-Rb-Ahl"/>
+                <constraint firstItem="Coo-KL-LiS" firstAttribute="trailing" secondItem="nbV-12-eAM" secondAttribute="trailing" id="iHw-OW-A8H"/>
+                <constraint firstAttribute="trailing" secondItem="Oto-wr-hdO" secondAttribute="trailing" id="pCH-55-h1P"/>
+                <constraint firstAttribute="bottom" secondItem="Oto-wr-hdO" secondAttribute="bottom" id="q0q-57-Wxx"/>
+                <constraint firstItem="Coo-KL-LiS" firstAttribute="centerY" secondItem="nbV-12-eAM" secondAttribute="centerY" id="vdN-hL-q8f"/>
+                <constraint firstItem="nbV-12-eAM" firstAttribute="height" secondItem="Oto-wr-hdO" secondAttribute="height" id="vsC-O4-u8o"/>
+            </constraints>
+            <size key="customSize" width="150" height="200"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="3"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="authorLabel" destination="HRM-nS-GC3" id="Drk-oy-S1P"/>
+                <outlet property="titleLabel" destination="pfp-sl-3An" id="Rnd-vf-tQk"/>
+            </connections>
+            <point key="canvasLocation" x="-47" y="47"/>
+        </collectionViewCell>
+    </objects>
+</document>

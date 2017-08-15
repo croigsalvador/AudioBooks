@@ -21,11 +21,15 @@ class ObtainAudioBookList {
     
     
     func obtainaAudioBookList(completion:@escaping ([AudioBookViewModel])->()) {
-        repository.obtainaAudioBookList{(audioBooks) in
-            if let audioBooks = audioBooks {
-                self.audioBookViewModels = self.mapper.map(audioBooks: audioBooks)
+        DispatchQueue.global(qos: .default).async {
+            self.repository.obtainaAudioBookList{(audioBooks) in
+                if let audioBooks = audioBooks {
+                    self.audioBookViewModels = self.mapper.map(audioBooks: audioBooks)
+                }
+                DispatchQueue.main.async {
+                    completion(self.audioBookViewModels)
+                }
             }
-            completion(self.audioBookViewModels)
         }
     }
     

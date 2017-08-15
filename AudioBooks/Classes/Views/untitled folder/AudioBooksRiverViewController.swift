@@ -9,11 +9,8 @@
 import Foundation
 import UIKit
 
-class AudioBooksRiverViewController: UIViewController, ErrorPresenter {
+class AudioBooksRiverViewController: UIViewController {
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var loaderContainer: UIView!
-    @IBOutlet fileprivate weak var reloadButton: UIButton!
     @IBOutlet fileprivate weak var riverTitleLabel: UILabel!
     fileprivate let presenter: AudioBooksRiverPresenter
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
@@ -39,36 +36,11 @@ class AudioBooksRiverViewController: UIViewController, ErrorPresenter {
         collectionView.delegate = self
         collectionView.register(AudioBookCollectionViewCell.self)
     }
-    
-    @IBAction func reloadButtonPressed(_ sender: Any) {
-        presenter.loadItems()
-        reloadButton.isHidden = true
-    }
 }
 
 extension AudioBooksRiverViewController: AudioBooksRiverView {
-    
-    func displayLoader() {
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
-    }
-    
-    func hideLoader() {
-        activityIndicator.isHidden = true
-        activityIndicator.stopAnimating()
-    }
-    
     func updateRiver(with title: String) {
         riverTitleLabel.text = title
-    }
-    
-    func displayError() {
-        presentError()
-    }
-    
-    func showReload() {
-        reloadButton.layoutIfNeeded()
-        reloadButton.isHidden = false
     }
 }
 
@@ -98,7 +70,7 @@ extension AudioBooksRiverViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.init(top: 6.0, left: 6.0, bottom: 6.0, right: 6.0)
+        return UIEdgeInsets.init(top: 6.0, left: 15.0, bottom: 6.0, right: 6.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

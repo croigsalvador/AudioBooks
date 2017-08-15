@@ -55,6 +55,6 @@ extension AudioBooksContainerViewController: UICollectionViewDataSource {
 extension AudioBooksContainerViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width:collectionView.frame.size.width, height:230.0)
+        return CGSize.init(width:collectionView.frame.size.width, height:242.0)
     }
 }

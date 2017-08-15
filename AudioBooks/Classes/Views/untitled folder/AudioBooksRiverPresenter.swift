@@ -9,9 +9,7 @@
 import Foundation
 
 protocol AudioBooksRiverView: class {
-    func displayLoader()
-    func hideLoader()
-    func updateRiver(with title: String)
+    func updateRiver(with title:String)
     func displayError()
     func showReload()
 }
@@ -31,18 +29,14 @@ class AudioBooksRiverPresenter: Presenter, DataSource {
     }
     
     func loadItems() {
-        view?.displayLoader()
         obtainAudioBookList.obtainaAudioBookList { (audiosBooks) in
-            self.view?.hideLoader()
-            if audiosBooks.count > 0 {
+            if audiosBooks.count == 0 {
+                self.view?.displayError()
+            } else {
                 self.audioBookCellViewModels = audiosBooks
                 self.view?.reloadData()
-            } else {
-                self.view?.displayError()
-                self.view?.showReload()
             }
         }
-        
         view?.updateRiver(with: "Top AudioBooks")
     }
     
@@ -52,9 +46,5 @@ class AudioBooksRiverPresenter: Presenter, DataSource {
     
     func cellViewModel(at indexPath: IndexPath) -> CellViewModel {
         return audioBookCellViewModels[indexPath.item]
-    }
-    
-    func headerViewModel(at indexPath: IndexPath) -> HeaderViewModel {
-        return RiverHeaderViewModel(title: "Top AudioBooks")
     }
 }
