@@ -11,12 +11,13 @@ import UIKit
 
 class AudioBooksRiverViewController: UIViewController, ErrorPresenter {
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var loaderContainer: UIView!
+    @IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet fileprivate weak var loaderContainer: UIView!
     @IBOutlet fileprivate weak var reloadButton: UIButton!
     @IBOutlet fileprivate weak var riverTitleLabel: UILabel!
-    fileprivate let presenter: AudioBooksRiverPresenter
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
+
+    fileprivate let presenter: AudioBooksRiverPresenter
     
     init(presenter: AudioBooksRiverPresenter) {
         self.presenter = presenter
@@ -98,7 +99,7 @@ extension AudioBooksRiverViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.init(top: 6.0, left: 6.0, bottom: 6.0, right: 6.0)
+        return UIEdgeInsets(top: 0.0, left: 6.0, bottom: 6.0, right: 6.0)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
