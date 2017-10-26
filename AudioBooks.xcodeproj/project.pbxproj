@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0FA817771F42F170007611F9 /* ErrorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA817761F42F170007611F9 /* ErrorPresenter.swift */; };
 		0FB588351F40BE91009C4DDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588341F40BE91009C4DDE /* AppDelegate.swift */; };
-		0FB5883A1F40BE91009C4DDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB588381F40BE91009C4DDE /* Main.storyboard */; };
 		0FB5883C1F40BE91009C4DDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB5883B1F40BE91009C4DDE /* Assets.xcassets */; };
 		0FB5883F1F40BE91009C4DDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FB5883D1F40BE91009C4DDE /* LaunchScreen.storyboard */; };
 		0FB588551F40BE92009C4DDE /* AudioBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB588541F40BE92009C4DDE /* AudioBooksUITests.swift */; };
@@ -62,7 +61,6 @@
 		0FA817761F42F170007611F9 /* ErrorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorPresenter.swift; sourceTree = "<group>"; };
 		0FB588311F40BE91009C4DDE /* AudioBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB588341F40BE91009C4DDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0FB588391F40BE91009C4DDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0FB5883B1F40BE91009C4DDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FB5883E1F40BE91009C4DDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FB588401F40BE91009C4DDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			children = (
 				0FB588631F40C3D2009C4DDE /* Classes */,
 				0FB588341F40BE91009C4DDE /* AppDelegate.swift */,
-				0FB588381F40BE91009C4DDE /* Main.storyboard */,
 				0FB5883B1F40BE91009C4DDE /* Assets.xcassets */,
 				0FB5883D1F40BE91009C4DDE /* LaunchScreen.storyboard */,
 				0FB588401F40BE91009C4DDE /* Info.plist */,
@@ -397,6 +394,7 @@
 					0FB588301F40BE91009C4DDE = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = CEZH3Q8957;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					0FB588441F40BE92009C4DDE = {
@@ -408,6 +406,7 @@
 					0FB5884F1F40BE92009C4DDE = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = CEZH3Q8957;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0FB588301F40BE91009C4DDE;
 					};
@@ -443,7 +442,6 @@
 				0FB588A51F42022A009C4DDE /* AudioBooksContainerViewController.xib in Resources */,
 				0FB5883C1F40BE91009C4DDE /* Assets.xcassets in Resources */,
 				0FB588A91F420994009C4DDE /* AudioBookRiverCollectionViewCell.xib in Resources */,
-				0FB5883A1F40BE91009C4DDE /* Main.storyboard in Resources */,
 				0FB588911F410F00009C4DDE /* AudioBooksRiverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,14 +525,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0FB588381F40BE91009C4DDE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FB588391F40BE91009C4DDE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0FB5883D1F40BE91009C4DDE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -646,7 +636,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crs.AudioBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -659,7 +650,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crs.AudioBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -702,7 +694,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crs.AudioBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = AudioBooks;
 			};
 			name = Debug;
@@ -716,7 +709,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crs.AudioBooksUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = AudioBooks;
 			};
 			name = Release;
